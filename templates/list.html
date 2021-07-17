@@ -1,0 +1,19 @@
+<h3>Student List</h3>
+
+<a href="http://18.204.3.66:5000/create">Add Contact</a>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{row.name}}</td>
+        <td>{{row.city}}</td>
+        <td><a href="http://18.204.3.66:5000/edit/{{row.id}}">Edit</a></td>
+        <td><a href="http://18.204.3.66:5000/delete/{{row.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
