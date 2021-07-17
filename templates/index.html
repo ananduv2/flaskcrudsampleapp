@@ -1,0 +1,21 @@
+<h1>Student Data</h1><br><br>
+
+<a href="{{url_for('create')}}">Add Student Data</a><br><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>CITY</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{row.id}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.city}}</td>
+        <td><a href="{{url_for('edit',id='row.id')}}">Edit</a></td>
+        <td><a href="{{url_for('delete',id='row.id')}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
